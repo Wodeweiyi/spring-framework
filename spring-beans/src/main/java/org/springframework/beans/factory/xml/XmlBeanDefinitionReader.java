@@ -311,6 +311,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	}
 
 	/**
+	 * 从指定的XML文件加载bean定义。
+	 * 形参:
+	 * encodeResource–XML文件的资源描述符，允许指定用于解析文件的编码
+	 * 返回值:
+	 * 找到的bean定义数
+	 * 抛出:
+	 * BeanDefinitionStoreException–在加载或解析错误的情况下
+	 *
 	 * Load bean definitions from the specified XML file.
 	 * @param encodedResource the resource descriptor for the XML file,
 	 * allowing to specify an encoding to use for parsing the file
@@ -420,9 +428,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	}
 
 	/**
-	 * Actually load the specified document using the configured DocumentLoader.
-	 * @param inputSource the SAX InputSource to read from
-	 * @param resource the resource descriptor for the XML file
+	 * 使用配置的DocumentLoader实际加载指定的文档。
+	 * @param inputSource 要读取的SAX InputSource
+	 * @param resource XML文件的资源描述符
 	 * @return the DOM Document
 	 * @throws Exception when thrown from the DocumentLoader
 	 * @see #setDocumentLoader
